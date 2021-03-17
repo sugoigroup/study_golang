@@ -1,4 +1,4 @@
-package strutils
+package utils
 
 import (
 	"strings"

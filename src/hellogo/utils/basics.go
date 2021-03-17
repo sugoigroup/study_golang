@@ -1,11 +1,10 @@
-package main
+package utils
 
 import (
 	"fmt"
 	"math"
-
-	"./strutils"
 )
+
 
 const username = "kim"
 const (
@@ -15,14 +14,17 @@ const (
 	ea = "earth"
 )
 
-func main() {
+// Public
+func PrintBasic() {
+
+
 	fname, lname := "fuck", "you"
 	var name string
 	var num int = 5
 	var pnum = &num
 
 	fmt.Println(fname, name)
-	fmt.Println(strutils.ToUpperCase(lname))
+	fmt.Println(ToUpperCase(lname))
 	fmt.Println(pnum)
 	fmt.Println(*pnum)
 
@@ -47,14 +49,14 @@ func main() {
 	v := &Vertex{3, 4}
 	fmt.Println(v.Abs())
 
-	strutils.Add("hohoho")
-	fmt.Println(strutils.GetAll())
+	Add("hohoho")
+	fmt.Println(GetAll())
 
 	arr := [3]string{"go", "is", "awesome"}
 	fmt.Println(arr)
-
 }
 
+// Private
 func add(x, y int) (returnX int, returnB bool) {
 	returnX = x + y
 	returnB = x > y
@@ -90,3 +92,5 @@ func reMap() (ms map[string]Vertex) {
 func (v *Vertex) Abs() float64 {
 	return math.Sqrt(v.Lat * v.Long)
 }
+
+
