@@ -2,12 +2,11 @@ package main
 
 import (
 	"./testserver"
-	"./utils"
 )
 
-
 func main() {
-	utils.PrintBasic()
+	//utils.PrintBasic()
 
-	testserver.Runserver()
+	testserver.RunJsonServer()
+
 }

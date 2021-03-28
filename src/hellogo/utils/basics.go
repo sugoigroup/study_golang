@@ -5,7 +5,6 @@ import (
 	"math"
 )
 
-
 const username = "kim"
 const (
 	ca = 10
@@ -16,7 +15,6 @@ const (
 
 // Public
 func PrintBasic() {
-
 
 	fname, lname := "fuck", "you"
 	var name string
@@ -54,6 +52,9 @@ func PrintBasic() {
 
 	arr := [3]string{"go", "is", "awesome"}
 	fmt.Println(arr)
+
+	testSwitch(fname)
+	testSwitch(1)
 }
 
 // Private
@@ -93,4 +94,14 @@ func (v *Vertex) Abs() float64 {
 	return math.Sqrt(v.Lat * v.Long)
 }
 
+func testSwitch(data interface{}) {
+	switch data.(type) {
+	case int:
+		fmt.Println("number")
+	case string:
+		fmt.Println("string")
+	default:
+		fmt.Println("idontknow")
+	}
 
+}
